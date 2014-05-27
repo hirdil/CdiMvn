@@ -7,10 +7,11 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import data.Fruit;
+import data.Plant;
 
 
 @Decorator
-public abstract class MarketableApple implements data.Fruit {
+public abstract class MarketableApple implements Plant {
 
 	@Inject
 	@Named("apple")

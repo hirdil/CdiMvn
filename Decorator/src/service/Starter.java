@@ -11,7 +11,6 @@ import javax.inject.Named;
 
 import qualifier.Idared;
 import qualifier.Jonagold;
-import data.Apple;
 import data.Fruit;
 
 @Singleton

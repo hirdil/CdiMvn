@@ -1,6 +1,6 @@
 package data;
 
-public abstract class Fruit {
+public abstract class Fruit implements Plant {
 
 	@Override
 	public String toString() {

@@ -4,6 +4,7 @@ import java.util.logging.Logger;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.LocalBean;
+import javax.ejb.Schedule;
 import javax.ejb.Singleton;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
@@ -30,7 +31,7 @@ public class Starter {
 	@Rotten
 	private Event< Apple> _appleEvent;
 
-//	@Schedule(second = "*/2", minute = "*", hour = "*", persistent = false)
+	@Schedule(second = "*/2", minute = "*", hour = "*", persistent = false)
 	private void createApple() {
 		final Apple apple = AppleBuilder.builder().type(AppleType.IDARED)
 				.build();
