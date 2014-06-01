@@ -9,9 +9,6 @@ import builder.AppleBuilder;
 import data.Apple;
 import data.AppleType;
 
-/**
- * Session Bean implementation class Starter
- */
 public class FruitProducer {
 
 //	@Produces

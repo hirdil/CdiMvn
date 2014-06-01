@@ -1,6 +1,9 @@
 package data;
 
-public abstract class Fruit implements Plant {
+import javax.inject.Named;
+
+@Named
+public class Fruit implements Plant {
 
 	@Override
 	public String toString() {

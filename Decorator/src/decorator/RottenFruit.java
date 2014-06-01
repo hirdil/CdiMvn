@@ -6,26 +6,24 @@ import javax.enterprise.inject.Any;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import data.Fruit;
 import data.Plant;
 
-
 @Decorator
-public abstract class MarketableApple implements Plant {
+public abstract class RottenFruit implements Plant {
 
 	@Inject
-	@Named("apple")
+	@Named("fruit")
 	@Delegate
 	@Any
-	private Fruit fruit;
+	private Plant plant;
 
-	public MarketableApple() {
-		System.out.println(MarketableApple.class + " Marketable Apple");
+	public RottenFruit() {
+		System.out.println(RottenFruit.class + " initialized");
 		// _logger.info(MarketableApple.class + " Marketable Apple");
 	}
 
 	@Override
 	public String toString() {
-		return MarketableApple.class + " Marketable Apple" + super.toString();
+		return RottenFruit.class + " decorates " + super.toString();
 	}
 }

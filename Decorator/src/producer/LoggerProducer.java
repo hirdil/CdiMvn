@@ -6,9 +6,6 @@ import javax.enterprise.inject.Produces;
 import javax.enterprise.inject.spi.InjectionPoint;
 import javax.inject.Named;
 
-/**
- * Session Bean implementation class Starter
- */
 public class LoggerProducer {
 
 	@Produces @Named("logger")
