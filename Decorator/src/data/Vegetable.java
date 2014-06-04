@@ -1,20 +1,17 @@
 package data;
 
-import interceptor.binding.ExecutionTime;
-
 import javax.inject.Named;
 
 @Named
-public class Peach extends Fruit {
+public class Vegetable implements Plant {
 
 	@Override
 	public String toString() {
-		return "Peach []";
+		return Vegetable.class.getSimpleName();
 	}
 
 	@Override
-	@ExecutionTime
 	public String getTaste() {
-		return "sweet";
+		return "spicy";
 	}
 }

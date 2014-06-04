@@ -22,7 +22,7 @@ public class Starter {
 	@PostConstruct
 	public void init() {
 		_logger.info(Starter.class + " is initializing...");
-		_logger.info("_peach = " + _peach.toString());
-		_logger.info("_peach.getTaste() = " + _peach.getTaste());
+		_logger.info("_peach = " + _peach);
+		_logger.info("taste = " + _peach.getTaste());
 	}
 }

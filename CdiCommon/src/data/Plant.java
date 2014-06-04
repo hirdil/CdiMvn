@@ -1,5 +1,5 @@
 package data;
 
 public interface Plant {
-	String toString();
+	public abstract String getTaste();
 }

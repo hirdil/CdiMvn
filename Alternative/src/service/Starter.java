@@ -7,7 +7,7 @@ import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.inject.Inject;
 
-import data.Vegetable;
+import data.Plant;
 
 @Singleton
 @Startup
@@ -16,13 +16,14 @@ public class Starter {
 	@Inject
 	private Logger _logger;
 
+	// same for Fruit
 	@Inject
-	private Vegetable _vegetable;
+	private Plant _plant;
 
 	@PostConstruct
 	public void init() {
 		_logger.info(Starter.class + " is initializing...");
-		_logger.info("_vegetable = " + _vegetable);
-		_logger.info("taste: " + _vegetable.getTaste());
+		_logger.info("injected:  " + _plant);
+		_logger.info("taste: " + _plant.getTaste());
 	}
 }

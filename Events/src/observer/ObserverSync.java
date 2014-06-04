@@ -8,12 +8,13 @@ import javax.inject.Inject;
 import qualifier.Idared;
 import data.Apple;
 
-public class ConsumerSync {
+//@ApplicationScoped
+public class ObserverSync {
 
-	@Inject 
+	@Inject
 	private Logger _logger;
-	
+
 	public void receiveApple(@Observes @Idared final Apple apple) {
-		_logger.info(ConsumerSync.class + " receives: " + apple);
+		_logger.info("" + this + " " + ObserverSync.class + " receives: " + apple);
 	}
 }

@@ -24,19 +24,18 @@ public class Starter {
 	@PostConstruct
 	public void init() {
 		_logger.info(Starter.class + " is initializing...");
-		
 	}
 
 	@Inject
 	@Idared
-	private Event< Apple> _appleEvent;
+	private Event<Apple> _appleEventProducer;
 
 	@Schedule(second = "*/5", minute = "*", hour = "*", persistent = false)
 	private void createApple() {
 		final Apple apple = AppleBuilder.builder().type(AppleType.IDARED)
 				.build();
-		_logger.info("fire: " + apple);
-		_appleEvent.fire(apple);
-		_logger.info("fired: " + apple);
+		_logger.info("begin: " + apple);
+		_appleEventProducer.fire(apple);
+		_logger.info("  end: " + apple);
 	}
 }

@@ -14,30 +14,34 @@ import data.Plant;
 @Startup
 public class Starter {
 
+	// field injection
 	@Inject
-	private Apple _fruit;
+	private Apple _apple;
 
-	public  Starter() {
+	public Starter() {
 		System.out.println("default constructor");
-		System.out.println("_fruit = " + _fruit);
+		System.out.println("_apple = " + _apple);
 	}
 
-	@Inject 
-	public  Starter(@Named("apple") final Fruit fruit4, @Named("plum") final Plant fruit5) {
-		System.out.println("constructor");
-		System.out.println("fruit4 = " + fruit4);
-		System.out.println("fruit5 = " + fruit5);
+	// constructor injection
+	@Inject
+	public Starter(@Named("apple") final Fruit fruit2,
+			@Named("plum") final Plant fruit3) {
+		System.out.println("constructor injection");
+		System.out.println("fruit2 = " + fruit2);
+		System.out.println("fruit3 = " + fruit3);
+	}
+
+	// method (setter) injection
+	@Inject
+	public void setter(final Apple apple2) {
+		System.out.println("method");
+		System.out.println("apple2 = " + apple2);
 	}
 
 	@PostConstruct
 	private void init() {
 		System.out.println("init");
-		System.out.println("_fruit = " + _fruit);
-	}
-
-	@Inject 
-	public void method(final Apple fruit2) {
-		System.out.println("method");
-		System.out.println("fruit2 = " + fruit2);
+		System.out.println("_apple = " + _apple);
 	}
 }

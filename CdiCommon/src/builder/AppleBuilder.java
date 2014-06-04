@@ -9,14 +9,19 @@ public class AppleBuilder {
 		return new AppleBuilder();
 	};
 
-	private Apple apple = new Apple();
+	private final Apple _apple = new Apple();
 
-	public AppleBuilder type(AppleType type) {
-		apple.setType(type);
+	public AppleBuilder type(final AppleType type) {
+		_apple.setType(type);
+		return this;
+	}
+
+	public AppleBuilder taste(final String taste) {
+		_apple.setTaste(taste);
 		return this;
 	}
 
 	public Apple build() {
-		return apple;
+		return _apple;
 	}
 }

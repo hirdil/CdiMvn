@@ -12,12 +12,12 @@ import data.Apple;
 
 @Stateless
 @Asynchronous
-public class ConsumerAsync {
+public class ObserverAsync {
 
-	@Inject 
+	@Inject
 	private Logger _logger;
-	
+
 	public void receiveApple(@Observes @Idared final Apple apple) {
-		_logger.info(ConsumerAsync.class + " receives: " + apple);
+		_logger.info(ObserverAsync.class + " receives: " + apple);
 	}
 }
