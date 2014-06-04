@@ -1,8 +1,6 @@
 package data;
 
-import javax.inject.Named;
 
-@Named
 public class Vegetable implements Plant {
 
 	@Override
