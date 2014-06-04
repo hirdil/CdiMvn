@@ -9,7 +9,7 @@ public class Peach extends Fruit {
 
 	@Override
 	public String toString() {
-		return "Peach []";
+		return Peach.class.getSimpleName();
 	}
 
 	@Override
